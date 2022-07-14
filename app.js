@@ -39,6 +39,7 @@ app.get("/movies", async (req, res) => {
       console.log("\nOur data:");
       console.log(data); // it will print your collection data
       data.forEach((x) => {
+        //indiviual data
         console.log(`Id: ${x._id} \t title: ${x.title}`);
       });
     });
