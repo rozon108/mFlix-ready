@@ -1,0 +1,23 @@
+<%- include('partials/header') %>
+<div><%= recievedList %></div>
+<br /><br />
+
+<%= recievedList.length %>
+<br /><br />
+<div>
+  <% recievedList.forEach((movie)=>{ %> id:
+  <h1><%= movie._id %></h1>
+  year:
+  <h2><%= movie.year %></h2>
+  <%= movie %>
+  <br />
+  <% })%>
+</div>
+<div class="container">
+  <div class="bigContainer">
+    <div class="row mb-6"><%- include('partials/movieCard') %></div>
+  </div>
+</div>
+
+<br /><br />
+<%- include('partials/footer') %>
