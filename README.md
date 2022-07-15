@@ -6,8 +6,8 @@ This app will display movies from MongoDB-Atlas database. It is sample database 
 Currenlty, we are able to read data from MongoDB Atlas from ur app using node js, mongoose.
 
       Our sample UI :
+      ![Sample UI](https://user-images.githubusercontent.com/56614817/179156963-2c37e5f3-84b2-4031-a1cf-9aafaecc61fd.png)
       
-      <img width="764" alt="Screen Shot 2022-07-15 at 3 22 36 pm" src="https://user-images.githubusercontent.com/56614817/179156963-2c37e5f3-84b2-4031-a1cf-9aafaecc61fd.png">
 
       Our data :
       
