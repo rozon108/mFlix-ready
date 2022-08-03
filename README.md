@@ -16,4 +16,23 @@ We are going to redesign our web site, give it a asthethic vibe, option to sort 
 Problem we are going to tackle :
 
       Deal with undefined. Some movie may not have certain data like movie poster(poster), rating or some other field. 
+      
 
+
+Things learned / i did: 
+      
+           Sorted movie by rating (ie. movie.imdb.rating)
+          
+ Made landing page:
+
+
+![Screen Shot 2022-08-04 at 12 10 18 am](https://user-images.githubusercontent.com/56614817/182629552-cb7484ad-73bc-4db4-98a2-4f3c8b6aba2f.png)
+
+
+ToDO:
+
+            Make tab like feature that has 3 options(Each displays different data)
+            Make payment / Subscription option
+            Home Page => ReDesgin it, make movie container. other page that displays movie
+            AllMoviePage => displays all the movie, Sorting option by name, year, Rating (only few(3) for now..)
+            
