@@ -33,14 +33,37 @@ app.get("/movies", async (req, res) => {
   const collection = mflixDB.collection("movies");
   collection
     .find({})
-    .limit(2)
-    .toArray(function (err, data) {
-      res.render("movies", { recievedList: data });
-      console.log("\nOur data:");
-      console.log(data); // it will print your collection data
+
+    .toArray(function (err, fullData) {
+      const topRatedMovies = [];
+      fullData.forEach((x) => {
+        const ourRating = x.imdb.rating;
+        const requiredRating = 8;
+        if (ourRating > requiredRating) {
+          topRatedMovies.push(x);
+        }
+        //console.log(ourRating);
+      });
+      //console.log(topRatedMovies);
+      const topRatedMoviess = topRatedMovies.slice(0, 100);
+      console.log(topRatedMovies[1]);
+      //Sort Movies by highest rating
+      topRatedMovies.sort((a, b) => {
+        return b.imdb.rating -a.imdb.rating;
+        //return a.imdb.rating < b.imdb.rating? 1 : (a.imdb.rating == b.imdb.rating? 0 : -1);
+      });
+      console.log(topRatedMovies.slice(0,2));
+      console.log("Unsorted \n");
+      console.log(topRatedMoviess.slice(0,2));
+
+      const data = fullData.slice(0, 100);
+      res.render("movies", { recievedList: data, topRateList: topRatedMovies });
+      console.log("\nOur data length:");
+      console.log(data.length); // it will print your collection data
       data.forEach((x) => {
         //indiviual data
-        console.log(`Id: ${x._id} \t title: ${x.title}`);
+        //console.log(`Id: ${x._id} \t title: ${x.title}`);
+        var ourID = x._id;
       });
     });
 });

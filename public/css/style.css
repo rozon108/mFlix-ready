@@ -1,3 +1,164 @@
+:root {
+  --primary-color: #1de302;
+  --background-color: #222;
+  --secondary-color: #279c03;
+  --secondary2-color: #1b5d01;
+  --secondary3-color: #002e06;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background: #222;
+  color: white;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: white;
+}
+
 a {
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  color: white;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+img {
+  width: 100%;
+}
+
+/* Landing Page */
+.showcase {
+  width: 100%;
+  height: 88vh;
+  position: relative;
+  background: url("../assets/showCaseBackground.jpeg") no-repeat center
+    center/cover;
+  box-shadow: inset 10px 10px 100px 100px black;
+}
+.showcase:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../assets/showCase-afterImg.png") no-repeat center
+    center/cover;
+  opacity: 0.57;
+
+  z-index: 1;
+}
+.showcase-top {
+  position: relative;
+  height: 90px;
+  z-index: 2;
+}
+.showcase-top img {
+  width: 85px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.showcase-top a {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, -50%);
+}
+.showcase-content {
+  z-index: 2;
+}
+/* Custom Button */
+.bton {
+  display: inline-block;
+  background: var(--secondary-color);
+  color: white;
+  padding: 0.4rem 1.3rem;
+  font-size: 1rem;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  outline: none;
+  box-shadow: 0 1px 0 rgba(0, 0, 0 0.45);
+  border-radius: 5px;
+}
+.bton:hover {
+  opacity: 0.9;
+}
+.bton-rounded {
+  border-radius: 9px;
+}
+.bton-xl {
+  font-size: 1.25rem;
+  padding: 0.5rem 1.5rem;
+  text-transform: uppercase;
+}
+.bton-lg {
+  font-size: 1rem;
+  padding: 0.8rem 2.1rem;
+  text-transform: uppercase;
+}
+
+.landingPage {
+  background-image: url("../assets/bckgImg.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 80vh;
+}
+
+/* movieCard Practice */
+.movie-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, auto));
+}
+.movie-box .box-img {
+  width: 100%;
+  height: 270px;
+}
+.movie-box .box-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.movie-box .box-img img:hover {
+  transform: translateY(-20px);
+  cursor: pointer;
+}
+/* horizontal ScrollAble TopRated movie */
+.topRatedMovie-container--wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.topRatedMovie-container .box-img {
+  flex: 0 0 auto;
+  height: 190px;
+  max-width: 100%;
+}
+.topRatedMovie-container .box-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
