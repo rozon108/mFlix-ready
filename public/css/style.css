@@ -43,15 +43,27 @@ p {
 img {
   width: 100%;
 }
-
+section {
+  border-bottom: 0.5rem solid var(--secondary3-color);
+}
+.mFlix-container {
+  /* This is similar to Bootsrap .container css property 
+          this gives equaly space to left and right makeing out content look centered*/
+  max-width: 70%;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+}
 /* Landing Page */
+
+/* Header */
 .showcase {
   width: 100%;
-  height: 88vh;
+  height: 85vh;
   position: relative;
   background: url("../assets/showCaseBackground.jpeg") no-repeat center
     center/cover;
-  box-shadow: inset 10px 10px 100px 100px black;
+  box-shadow: inset 120px 120px 250px black, inset -120px -60px 250px black;
 }
 .showcase:after {
   content: "";
@@ -87,7 +99,114 @@ img {
 .showcase-content {
   z-index: 2;
 }
-/* Custom Button */
+/*
+    Second Section
+    Conatins 3 Tabs
+    */
+.tab-head {
+  border-bottom: rgb(0, 0, 0) solid 2px;
+}
+.tab-icons-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+  align-items: center;
+  row-gap: 10px;
+}
+.tab-icons-container > div {
+  flex: 1 1 auto;
+}
+.tab-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tab-active {
+  border-bottom: var(--secondary-color) solid 2px;
+}
+.tab-item p {
+  padding: 0 20px;
+  margin-left: 10px;
+}
+/* end of tab-head or Tab Icons 
+    Start of Tab Content
+*/
+.tab-content {
+  padding: 1.5rem 0;
+  background-color: #000;
+  color: #999;
+}
+/* end of tab-head or Tab Icons 
+    Start of Tab Content
+*/
+.tab-content {
+  padding: 1.5rem 0;
+  background-color: #000;
+  color: #999;
+}
+
+/* Tab 2 */
+.tab2-head {
+  color: #fff;
+  text-align: center;
+}
+/* Table  */
+.tab-table {
+  width: 100%;
+  margin: 2rem 0;
+  /* from site */
+  border-spacing: 10px; /* cell spacing */
+  /* border-collapse: collapse;  default */
+  font-size: 0.75rem;
+}
+
+.tab-table thead tr {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.tab-table tbody tr:nth-child(odd) {
+  background-color: #222;
+}
+.tab-table thead tr th,
+.tab-table tbody tr td {
+  padding: 0.3rem; /* cellpadding */
+  padding-left: 0.9rem;
+}
+.tab-table tbody tr td:nth-child(1n + 2) {
+  text-align: center;
+}
+
+/* End Of Tab2 Table */
+
+/* End of Tab and Its Content */
+
+/* Footer */
+footer {
+  max-width: 70%;
+  margin: 1rem auto;
+  overflow: hidden;
+}
+footer,
+footer a {
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.footer-cols {
+  display: flex;
+  flex-direction: row;
+}
+footer li {
+  line-height: 1.9rem;
+}
+.footer-cols ul:nth-child(1) {
+  padding-left: 0;
+}
+
+/* --End OF FOOTER */
+
+/* Our Button */
 .bton {
   display: inline-block;
   background: var(--secondary-color);
@@ -117,14 +236,6 @@ img {
   font-size: 1rem;
   padding: 0.8rem 2.1rem;
   text-transform: uppercase;
-}
-
-.landingPage {
-  background-image: url("../assets/bckgImg.jpeg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 80vh;
 }
 
 /* movieCard Practice */

@@ -1,23 +1,129 @@
 <%- include('partials/header') %>
 
-<header class="showcase">
-  <div class="showcase-top">
-    <img src="/assets/mFlix-logo.png" alt="" />
-    
-    <a
-      href=""
-      class="bton"
-      data-toggle="tooltip"
-      data-placement="left-end"
-      title="Feature Coming Soon... 🫣"
-      >Login</a
+<section class="header">
+  <header class="showcase">
+    <div class="showcase-top">
+      <img src="/assets/mFlix-logo.png" alt="" />
+
+      <a
+        href=""
+        class="bton"
+        data-toggle="tooltip"
+        data-placement="left-end"
+        title="Feature Coming Soon... 🫣"
+        >Login</a
+      >
+    </div>
+    <div
+      class="showcase-content position-relative m-auto mt-5 text-center d-flex flex-column justify-content-center align-items-center"
     >
+      <h1>Watch mFlix collection !</h1>
+      <p class="lh-lg fw-bold text-uppercase">
+        Watch upto 1000 movies..Sub for more. Cancel Anytime
+      </p>
+      <a href="" class="bton bton-xl"
+        >Try it for FREE <i class="fa-solid fa-circle-chevron-right"></i
+      ></a>
+    </div>
+  </header>
+</section>
+
+<section class="tab">
+  <div class="tab-head">
+    <div class="tab-icons-container mFlix-container">
+      <div id="tab1" class="tab-item tab-active">
+        <i class="fa-solid fa-door-open fa-3x"></i>
+        <p>Cancel Anytime</p>
+      </div>
+      <div id="tab2" class="tab-item">
+        <i class="fa-solid fa-tags fa-3x"></i>
+        <p>Pick Your Feature</p>
+      </div>
+      <div id="tab3" class="tab-item">
+        <div class="mobile-icons d-flex position-relative">
+          <i class="flex-1 fa-solid fa-mobile fa-3x" style="color: #e9ecef"></i>
+          <i
+            class="position-absolute ms-3 mt-2 fa-solid fa-mobile-screen-button fa-3x"
+          ></i>
+        </div>
+        <p>Watch Anywhere</p>
+      </div>
+    </div>
   </div>
-  <div class="showcase-content position-relative m-auto mt-5 text-center d-flex flex-column justify-content-center align-items-center">
-    <h1>Watch mFlix collection !</h1>
-    <p class="lh-lg fw-bold text-uppercase">Watch upto 1000 movies..Sub for more. Cancel Anytime </p>
-    <a href="" class="bton bton-xl">Watch free for 30 Days <i class="fa-solid fa-circle-chevron-right"></i></a>
+  <div class="tab-content">
+    <div class="tab-content-container mFlix-container">
+      <!-- <div id="tab-content1" class="tab-content-item active">div.tab-con</div> -->
+      <div id="tab-content2" class="tab-content-item">
+        <div class="tab2-head">
+          <h3 class="tab2-title">
+            Choose one plan and watch everything on mFlix
+          </h3>
+          <div class="bton">Watch for FREE!</div>
+        </div>
+        <table class="tab-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>FREE</th>
+              <th>Standard</th>
+              <th>Premium</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Monthly price</td>
+              <td>Free</td>
+              <td>$12.99</td>
+              <td>$15.99</td>
+            </tr>
+            <tr>
+              <td>HD Available</td>
+              <td><i class="fas fa-times"></i></td>
+              <td><i class="fas fa-check"></i></td>
+              <td><i class="fas fa-check"></i></td>
+            </tr>
+            <tr>
+              <td>Ultra HD Available</td>
+              <td><i class="fas fa-times"></i></td>
+              <td><i class="fas fa-times"></i></td>
+              <td><i class="fas fa-check"></i></td>
+            </tr>
+            <tr>
+              <td>Screens you can watch on at the same time</td>
+              <td>1</td>
+              <td>2</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>Watch on your laptop, TV, phone and tablet</td>
+              <td><i class="fas fa-check"></i></td>
+              <td><i class="fas fa-check"></i></td>
+              <td><i class="fas fa-check"></i></td>
+            </tr>
+            <tr>
+              <td>Unlimited movies and TV shows</td>
+              <td><i class="fas fa-check"></i></td>
+              <td><i class="fas fa-check"></i></td>
+              <td><i class="fas fa-check"></i></td>
+            </tr>
+            <tr>
+              <td>Cancel anytime</td>
+              <td><i class="fas fa-check"></i></td>
+              <td><i class="fas fa-check"></i></td>
+              <td><i class="fas fa-check"></i></td>
+            </tr>
+            <tr>
+              <td>First month free</td>
+              <td><i class="fas fa-check"></i></td>
+              <td><i class="fas fa-check"></i></td>
+              <td><i class="fas fa-check"></i></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- <div id="tab-content3" class="tab-content-item">div.tab-con</div> -->
+    </div>
   </div>
-</header>
+</section>
 
 <%- include('partials/footer') %>
