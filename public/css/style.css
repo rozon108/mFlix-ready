@@ -104,7 +104,7 @@ section {
     Conatins 3 Tabs
     */
 .tab-head {
-  border-bottom: rgb(0, 0, 0) solid 2px;
+  border-bottom: #999 solid 2px;
 }
 .tab-icons-container {
   display: flex;
@@ -131,23 +131,36 @@ section {
 /* end of tab-head or Tab Icons 
     Start of Tab Content
 */
+#tab1-content,
+#tab2-content,
+#tab3-content{
+  display: none;
+}
+.active{
+  display: block !important;
+}
+
 .tab-content {
   padding: 1.5rem 0;
   background-color: #000;
   color: #999;
 }
-/* end of tab-head or Tab Icons 
-    Start of Tab Content
-*/
-.tab-content {
-  padding: 1.5rem 0;
-  background-color: #000;
-  color: #999;
+.tab-content-heading {
+  color: #fff;
+}
+
+/* tab1 */
+.tab1-content-inner {
+  /* hard to do with display flex */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Tab 2 */
-.tab2-head {
-  color: #fff;
+.tab2-content-heading{
   text-align: center;
 }
 /* Table  */
@@ -159,12 +172,10 @@ section {
   /* border-collapse: collapse;  default */
   font-size: 0.75rem;
 }
-
 .tab-table thead tr {
   color: #fff;
   text-transform: uppercase;
 }
-
 .tab-table tbody tr:nth-child(odd) {
   background-color: #222;
 }
@@ -176,8 +187,23 @@ section {
 .tab-table tbody tr td:nth-child(1n + 2) {
   text-align: center;
 }
-
 /* End Of Tab2 Table */
+
+/* tab3 */
+#tab3-content > .tab-content-heading{
+  display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-gap: 1rem;
+	justify-content: center;
+	align-items: center;
+}
+#tab3-content .tab3-content{
+  margin: top 2.1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+	grid-gap: 2rem;
+	text-align: center;
+}
 
 /* End of Tab and Its Content */
 
@@ -205,6 +231,20 @@ footer li {
 }
 
 /* --End OF FOOTER */
+
+/* Custom Css like bootstrap */
+/* text style */
+.ourText-xl {
+  font-size: 1.8rem;
+}
+.ourText-md {
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  color: #fff;
+}
+.ourText-dark {
+  color: #999;
+}
 
 /* Our Button */
 .bton {
@@ -237,6 +277,7 @@ footer li {
   padding: 0.8rem 2.1rem;
   text-transform: uppercase;
 }
+/* End of CSS Custom Style */
 
 /* movieCard Practice */
 .movie-container {
